@@ -1,0 +1,53 @@
+{
+	"name": "sherwood",
+	"version": "1.0.0",
+	"description": "Assets for sherwood theme",
+	"main": "webpack.config.js",
+	"dependencies": {
+		"@fortawesome/fontawesome-pro": "^5.13.0",
+		"@popperjs/core": "^2.6.0",
+		"aos": "^2.3.4",
+		"balanced-text": "^1.1.6",
+		"bootstrap": "^5.0.0-beta1",
+		"lodash": "^4.17.20",
+		"modernizr-webpack-plugin": "^1.0.7",
+		"p5": "^1.2.0",
+		"regenerator-runtime": "^0.13.7",
+		"scrollmagic": "^2.0.8",
+		"simple-scrollspy": "^2.0.3",
+		"vue": "^2.6.11"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.1",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/register": "^7.10.5",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^3.5.3",
+		"file-loader": "^6.0.0",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.14.0",
+		"postcss-loader": "^3.0.0",
+		"precss": "^4.0.0",
+		"sass-loader": "^8.0.2",
+		"vue-loader": "^15.9.2",
+		"vue-template-compiler": "^2.6.11",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12"
+	},
+	"browserslist": [
+		"last 1 version",
+		"not dead",
+		"ie >= 11"
+	],
+	"scripts": {
+		"watch": "webpack --mode=development --watch --config webpack.config.js",
+		"dev": "webpack --mode=development --config webpack.config.js",
+		"build": "webpack --mode=production --config webpack.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "github.com:trvswgnr/sherwood.git"
+	},
+	"author": "Travis Aaron Wagner",
+	"license": "ISC"
+}
