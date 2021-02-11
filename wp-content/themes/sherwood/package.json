@@ -25,7 +25,7 @@
 	"browserslist": [
 		"last 1 version",
 		"not dead",
-		"ie >= 11"
+		"ie >= 9"
 	],
 	"scripts": {
 		"watch": "webpack --mode=development --watch --config webpack.config.js",
