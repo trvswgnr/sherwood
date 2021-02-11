@@ -69,13 +69,13 @@ wp-content/plugins/*
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
 wp-content/themes/*
-!wp-content/themes/emma/
-wp-content/themes/emma/node_modules
-wp-content/themes/emma/package-lock.json
-wp-content/themes/emma/.sass-cache/
-wp-content/themes/emma/error_log
-wp-content/themes/emma/.sass-cache/
-wp-content/themes/emma/error_log
+!wp-content/themes/sherwood/
+wp-content/themes/sherwood/node_modules
+wp-content/themes/sherwood/package-lock.json
+wp-content/themes/sherwood/.sass-cache/
+wp-content/themes/sherwood/error_log
+wp-content/themes/sherwood/.sass-cache/
+wp-content/themes/sherwood/error_log
 
 #*/config.codekit
 #*/config.codekit3
@@ -118,4 +118,4 @@ wp-content/themes/emma/error_log
 *.avi
 
 # compiled assets
-wp-content/themes/emma/assets/
+wp-content/themes/sherwood/assets/
