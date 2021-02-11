@@ -1,0 +1,49 @@
+// text inputs.
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+	@extend .form-control;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	@extend .form-check-input;
+
+	& + label {
+		@extend .form-check-label;
+	}
+
+	&:checked + label {
+		font-weight: $font-weight-bold;
+	}
+}
+
+// file uploads.
+input[type="file"] {}
+
+// buttons.
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	@extend .btn;
+}
+
+textarea {
+	@extend .form-control;
+}
+
+select {
+	@extend .form-select;
+}
