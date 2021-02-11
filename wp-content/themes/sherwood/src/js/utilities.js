@@ -8,9 +8,7 @@
 
 export default class u {};
 
-u.camelToKebab = (string) => {
-    return string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-};
+u.camelToKebab = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 /**
  * Apply multiple styles to an element
