@@ -44,6 +44,9 @@ Thumbs.db
 # don't ignore editorconfig in root
 !.editorconfig
 
+# don't ignore cdn folder
+!cdn/
+
 # wpengine specific
 .smushit-status
 .gitattributes
