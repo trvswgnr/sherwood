@@ -46,12 +46,6 @@ class Theme {
 				</style>';
 		} );
 		add_filter( 'body_class', array( $this, 'conditional_classes' ) );
-
-		add_filter( 'get_the_archive_title', array( $this, 'emma_archive_title' ), 10, 3 );
-	}
-
-	function emma_archive_title ($title, $original_title, $prefix) {
-		return str_replace($prefix, '', $title);
 	}
 
 	public function set_vars() {
@@ -97,6 +91,10 @@ class Theme {
 			$version,
 			true
 		);
+
+		wp_localize_script( 'main', 'theme', array(
+			'siteUrl' => site_url(),
+		));
 	}
 
 	/**
@@ -116,6 +114,23 @@ class Theme {
 			function() {
 				return '|';
 			}
+		);
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		$logo_width  = 300;
+		$logo_height = 100;
+
+		add_theme_support(
+			'custom-logo',
+			array(
+				'flex-width'           => true,
+				'flex-height'          => true,
+				'unlink-homepage-logo' => true,
+			)
 		);
 
 		// switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -239,16 +254,16 @@ class Theme {
 		);
 
 		// add a setting for the site logo.
-		$wp_customize->add_setting( $args['settings'] );
+		// $wp_customize->add_setting( $args['settings'] );
 
 		// add a control to upload the logo.
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				$args['settings'],
-				$args
-			)
-		);
+		// $wp_customize->add_control(
+		// 	new WP_Customize_Image_Control(
+		// 		$wp_customize,
+		// 		$args['settings'],
+		// 		$args
+		// 	)
+		// );
 	}
 
 	/**
