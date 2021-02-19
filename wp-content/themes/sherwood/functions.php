@@ -12,6 +12,6 @@ require_once 'classes/class-sherwood.php';
 $sherwood = new Sherwood();
 
 function get_cdn_url($filename) {
-	$base = 'https://cdn.jsdelivr.net/gh/trvswgnr/cdn@latest/';
+	$base = 'https://cdn.jsdelivr.net/gh/trvswgnr/sherwood@latest/cdn/';
 	return $base . trim($filename, '/');
 }
