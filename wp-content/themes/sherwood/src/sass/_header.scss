@@ -1,0 +1,19 @@
+/**
+ * Header
+ * @package sherwood
+ */
+
+// move admin bar to the bottom.
+#wpadminbar {
+	position: fixed !important;
+	top: initial !important;
+	bottom: 0 !important;
+
+	.ab-sub-wrapper {
+		bottom: 100%;
+	}
+}
+
+html[lang] {
+	margin-top: 0 !important;
+}

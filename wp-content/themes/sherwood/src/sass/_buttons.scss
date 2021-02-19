@@ -1,0 +1,43 @@
+%btn {
+	background-color: $primary;
+	padding: 0.75rem 1.5rem;
+	color: $white;
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	word-spacing: 0.1em;
+	border-radius: $radius;
+	text-decoration: none !important;
+
+	&:hover {
+		background-color: darken($primary, 5%);
+		color: $white;
+	}
+
+	@media (min-width: $md) {
+		display: inline-block;
+	}
+}
+
+%btn-white {
+	background-color: $white;
+	color: $dark;
+
+	&:hover {
+		background-color: darken($white, 5%);
+		color: $primary;
+	}
+}
+
+.btn {
+	@extend %btn;
+
+	.hero & {
+		@extend %btn-white;
+	}
+}
+
+.btn-white {
+	@extend %btn-white;
+}

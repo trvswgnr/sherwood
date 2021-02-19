@@ -4,3 +4,141 @@
  * @package sherwood
  */
 
+:root {
+	--nav-height: 95px;
+	--vh: 1vh;
+}
+
+@mixin full-height($prop: min-height) {
+	#{$prop}: calc(var(--vh) * 100 - var(--nav-height));
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: $xl;
+	margin: auto;
+	padding-left: $container-padding-x;
+	padding-right: $container-padding-x;
+}
+
+.container-md {
+	max-width: $md;
+}
+
+.container-lg {
+	max-width: $lg;
+}
+
+.container-xl {
+	max-width: $xl;
+}
+
+.section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	@include full-height;
+
+	@media (min-width: $md) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		min-height: 75vh;
+	}
+}
+
+.dark {
+	color: $light;
+	background-color: $dark;
+}
+
+.hero {
+	background-color: $dark;
+	color: $light;
+
+	h1 {
+		font-size: 3rem;
+		
+		@media (min-width: $md) {
+			font-size: 4rem;
+		}
+	}
+
+	p {
+		font-size: 1.125rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	margin: 0 -1.5rem;
+	align-items: center;
+	
+	.col {
+		flex: 1;
+		padding: 0 1.5rem;
+	}
+}
+
+figure {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	
+	@media (min-width: $md) {
+		flex-direction: row;
+		margin-left: -$container-padding-x;
+		margin-right: -$container-padding-x;
+	}
+
+	img,
+	figcaption {
+		display: block;
+
+		@media (min-width: $md) {
+			margin-left: $container-padding-x;
+			margin-right: $container-padding-x;
+		}
+	}
+
+	img {
+		border-radius: $radius;
+		margin-bottom: 1rem;
+
+		@media (min-width: $md) {
+			max-width: 50%;
+			margin-bottom: 0;
+		}
+	}
+
+	figcaption {
+		max-width: 31rem;
+		order: 1;
+		
+		@media (min-width: $md) {
+			order: initial;
+		}
+	}
+}
+
+footer {
+	@extend .dark;
+	padding: 5rem 0;
+	
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
