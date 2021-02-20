@@ -34,7 +34,6 @@ export default {
 .bg,
 .bg::after,
 .bg img{
-	content: "";
 	display: block;	
 	position: absolute;
 	left: 0;
@@ -49,6 +48,7 @@ export default {
 }
 
 .bg::after {
+	content: "";
 	background-color: rgba(#000, 0.6);
 }
 
