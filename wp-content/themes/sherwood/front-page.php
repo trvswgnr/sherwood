@@ -41,14 +41,19 @@ get_header();
 		<div class="container">
 			<figure>
 				<figcaption>
-					<h2>Our Vision</h2>
-					<p>We started Sherwood Gardens to create a serene environment for all to enjoy. There's nothing more important to us than making sure your special day is just that—special.</p>
-					<a href="#" class="btn">View Gallery</a>
+					<h2 style="font-size: calc(1rem + 1vw);">Southwest Michigan's Best Kept Secret</h2>
+					<p>Sherwood Gardens is proud to offer a completely renovated 1903 Colonial home and grounds presented in a warm and unique style. The entire estate is available for Weekend Rental.</p>
+					<a href="#" class="btn">See Our Accomodations</a>
 				</figcaption>
 				<img src="https://02f0a56ef46d93f03c90-22ac5f107621879d5667e0d7ed595bdb.ssl.cf2.rackcdn.com/sites/1632/photos/730141/fall_wedding_2017_21220171109-32253-lscsgf_x435.JPG" alt="Behind House" />
 			</figure>
 		</div>
 	</section>
+	<div class="the-content">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+	</div>
 </article>
 <?php
 get_footer();
