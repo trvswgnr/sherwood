@@ -1,18 +1,20 @@
 <template>
-	<nav id="primaryNav" role="navigation">
+	<header id="primaryNav" role="navigation">
 		<div class="container">
 			<a class="brand" :href="theme.siteUrl" v-html="logoHtml"></a>
 			<div class="toggle"><i class="far fa-bars"></i></div>
-			<ul>
-				<li><a href="#">Sherwood Gardens House</a></li>
-				<li><a href="#">Carriage House</a></li>
-				<li><a href="#">Event Barn</a></li>
-				<li><a href="#">Weddings</a></li>
-				<li><a href="#">Rates</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
+			<nav>
+				<ul>
+					<li><a href="#">Sherwood Gardens House</a></li>
+					<li><a href="#">Carriage House</a></li>
+					<li><a href="#">Event Barn</a></li>
+					<li><a href="#">Weddings</a></li>
+					<li><a href="#">Rates</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
 		</div>
-	</nav>
+	</header>
 </template>
 <script>
 export default {
@@ -29,7 +31,7 @@ export default {
 <style scoped lang="scss">
 @import "../../sass/_variables.scss";
 
-nav {
+header {
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
 	position: sticky;
@@ -55,6 +57,14 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+nav {
+	display: none;
+
+	@media (min-width: $md) {
+		display: block;
+	}
 }
 
 ul {
