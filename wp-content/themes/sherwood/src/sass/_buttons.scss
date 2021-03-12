@@ -10,7 +10,8 @@
 	border-radius: $radius;
 	text-decoration: none !important;
 
-	&:hover {
+	&:hover,
+	.dark &:hover {
 		background-color: darken($primary, 5%);
 		color: $white;
 	}
