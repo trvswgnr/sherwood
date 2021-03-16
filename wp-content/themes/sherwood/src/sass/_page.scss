@@ -1,0 +1,46 @@
+/**
+ * Page
+ * @package sherwood
+ */
+
+.page:not(.home) {
+	.hero {
+		position: relative;
+		height: calc(6vh + 9vw);
+		display: flex;
+		align-items: center;
+		background-color: $primary;
+		background-image: linear-gradient(to bottom right, #ff0700, transparent);
+	}
+
+	h1 {
+		position: relative;
+		color: #fff;
+		@media (min-width: $lg) {
+			font-size: 5rem;
+		}
+	}
+
+	h2, h3 {
+		color: $primary;
+	}
+
+	h3 {
+		margin-top: 1.5rem;
+	}
+
+	.wp-post-image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.content {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		min-height: 70vh;
+	}
+}

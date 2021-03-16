@@ -9,6 +9,7 @@
 	word-spacing: 0.1em;
 	border-radius: $radius;
 	text-decoration: none !important;
+	border: 0;
 
 	&:hover,
 	.dark &:hover {
@@ -31,7 +32,8 @@
 	}
 }
 
-.btn {
+.btn,
+[type="submit"] {
 	@extend %btn;
 
 	.hero & {

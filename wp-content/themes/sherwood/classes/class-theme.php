@@ -87,7 +87,7 @@ class Theme {
 		wp_enqueue_script(
 			'main',
 			get_template_directory_uri() . $file . '?ver=' . $version,
-			array(),
+			array('jquery'),
 			$version,
 			true
 		);

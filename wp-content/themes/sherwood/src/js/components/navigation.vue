@@ -5,12 +5,9 @@
 			<div class="toggle"><i class="far fa-bars"></i></div>
 			<nav>
 				<ul>
-					<li><a href="#">Sherwood Gardens House</a></li>
-					<li><a href="#">Carriage House</a></li>
-					<li><a href="#">Event Barn</a></li>
-					<li><a href="#">Weddings</a></li>
-					<li><a href="#">Rates</a></li>
-					<li><a href="#">Contact Us</a></li>
+					<li><a :href="theme.siteUrl + '/accommodations'">Accommodations</a></li>
+					<li><a :href="theme.siteUrl + '/rates'">Rates</a></li>
+					<li><a :href="theme.siteUrl + '/contact'" class="btn btn-primary">Contact Us</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,6 +35,9 @@ header {
 	top: 0;
 	z-index: 1000;
 	background-color: $light;
+	background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
 	&.scrolled {
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -101,5 +101,10 @@ li {
 			max-width: 120px;
 		}
 	}
+}
+
+.btn-primary {
+	font-size: 13px;
+    margin-left: 1rem;
 }
 </style>

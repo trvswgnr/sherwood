@@ -27,3 +27,13 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
 
 addEventListener('scroll', e => nav.classList[pageYOffset > nav.offsetHeight ? 'add' : 'remove']('scrolled'));
+
+(function($) {
+	$('.blocks-gallery-grid').each(function() {
+		let $gallery = $(this);
+		let $items = $gallery.find('.blocks-gallery-item');
+		$items.on('click', function() {
+			$(this).prependTo($gallery);
+		});
+	});
+}(jQuery));

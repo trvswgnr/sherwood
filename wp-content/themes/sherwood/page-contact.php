@@ -23,7 +23,15 @@ if ( have_posts() ) :
 		</header>
 
 		<main id="content" class="content container" role="content">
-			<?php the_content(); ?>
+			<div class="row" align="start">
+				<div class="col">
+					<?php the_content(); ?>
+				</div>
+				<div class="col">
+				<h2>Find Us</h2>
+				<iframe width="100%" height="500px" style="margin-top: 1rem;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnqRKZUWWJ3b1bJSLcGKVYXbndZYn-CAI&amp;q=414%20N.%20Sherwood%20Ave.,%20Plainwell,%20MI%2049080" allowfullscreen=""></iframe>
+				</div>
+			</div>
 		</main>
 		<?php
 	endwhile;
@@ -32,3 +40,5 @@ endif;
 </article>
 <?php
 get_footer();
+//[contact-form-7 id="65" title="Contact form 1"]
+

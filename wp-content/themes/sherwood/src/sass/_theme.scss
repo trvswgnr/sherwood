@@ -17,10 +17,15 @@
 .wp-block-group__inner-container {
 	position: relative;
 	width: 100%;
-	max-width: $xl;
-	margin: auto;
+	max-width: 1200px;
+	margin: 0 auto;
 	padding-left: $container-padding-x;
 	padding-right: $container-padding-x;
+
+	@media (min-width: $md) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 
 .container-md {
@@ -76,10 +81,16 @@
 }
 
 .row {
-	display: flex;
+	@media (min-width: $md) {
+		display: flex;
+	}
 	justify-content: center;
 	margin: 0 -1.5rem;
 	align-items: center;
+
+	&[align="start"] {
+		align-items: flex-start;
+	}
 	
 	.col {
 		flex: 1;
@@ -87,7 +98,7 @@
 	}
 }
 
-figure {
+figure.media-content {
 	justify-content: center;
 	align-items: center;
 	display: flex;
