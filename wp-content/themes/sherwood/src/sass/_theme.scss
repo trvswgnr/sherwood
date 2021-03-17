@@ -154,3 +154,8 @@ footer {
 		}
 	}
 }
+
+input, button, textarea {
+	appearance: none;
+	border: 1px solid #ddd;
+}
