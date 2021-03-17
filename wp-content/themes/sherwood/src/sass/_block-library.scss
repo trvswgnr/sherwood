@@ -14,7 +14,7 @@
 		max-width: 100%;
 		cursor: pointer;
 
-		&:nth-child(1) {
+		&:first-child {
 			grid-column: span 3;
 			grid-row: span 3;
 			cursor: initial;
@@ -30,7 +30,27 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
-			background: #fafafa;
+			background: #292929;
+		}
+	}
+}
+
+.wp-block-gallery {
+	&.columns-2 {
+		.blocks-gallery-grid {
+			grid-auto-flow: dense;
+
+			.blocks-gallery-item {
+				&:first-child {
+					grid-column: span 3;
+					grid-row: span 5;
+					cursor: initial;
+
+					img {
+						object-fit: contain;
+					}
+				}
+			}
 		}
 	}
 }
