@@ -2,8 +2,8 @@
 	<header id="primaryNav" role="navigation">
 		<div class="container">
 			<a class="brand" :href="theme.siteUrl" v-html="logoHtml"></a>
-			<div class="toggle"><i class="far fa-bars"></i></div>
-			<nav>
+			<div class="toggle" @click="toggle"><i class="far fa-bars"></i></div>
+			<nav :class="toggleClass">
 				<ul>
 					<li><a :href="theme.siteUrl + '/accommodations'">Accommodations</a></li>
 					<li><a :href="theme.siteUrl + '/rates'">Rates</a></li>
@@ -20,7 +20,18 @@ export default {
 	},
 	data() {
 		return {
-			theme
+			theme,
+			toggleState: false
+		}
+	},
+	computed: {
+		toggleClass() {
+			return this.toggleState ? 'active' : '';
+		}
+	},
+	methods: {
+		toggle() {
+			this.toggleState = !this.toggleState;
 		}
 	}
 }
@@ -57,6 +68,8 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	flex-wrap: wrap;
 }
 
 nav {
@@ -75,6 +88,17 @@ ul {
 
 	@media (min-width: $md) {
 		display: flex;
+	}
+}
+
+.active {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -105,6 +129,9 @@ li {
 
 .btn-primary {
 	font-size: 13px;
-    margin-left: 1rem;
+
+	@media (min-width: $md) {
+		margin-left: 1rem;
+	}
 }
 </style>
