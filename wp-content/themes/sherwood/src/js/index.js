@@ -28,6 +28,21 @@ document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'p
 
 addEventListener('scroll', e => nav.classList[pageYOffset > nav.offsetHeight ? 'add' : 'remove']('scrolled'));
 
+const checkBackdropFilterSupport = () => {
+	// add no-backdrop-filter class to if CSS.support isnt supported or if backdrop-filter isnt supported
+	if (
+		('CSS' in window && 'supports' in window.CSS)
+		&& (window.CSS.supports('backdrop-filter', 'blur(10px)') || window.CSS.supports('-webkit-backdrop-filter', 'blur(10px)'))
+	) {
+		return true;
+	} else {
+		document.documentElement.classList.add('no-backdrop-filter');
+		console.log("browser doesn't support backdrop-filter");
+		return false;
+	}
+};
+checkBackdropFilterSupport();
+
 (function($) {
 	$('.wp-block-gallery:not(.reversed) .blocks-gallery-grid').each(function() {
 		let $gallery = $(this);
