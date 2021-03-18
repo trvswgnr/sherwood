@@ -16,7 +16,6 @@ if ( have_posts() ) :
 		the_post();
 		?>
 		<header class="hero dark">
-			<background src="<?php echo get_the_post_thumbnail_url(); ?>" blur="3px"></background>
 			<div class="container">
 			<?php the_title('<h1>', '</h1>'); ?>
 			</div>

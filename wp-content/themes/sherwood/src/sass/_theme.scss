@@ -96,6 +96,10 @@
 		flex: 1;
 		padding: 0 1.5rem;
 	}
+
+	.justify-between {
+		justify-content: space-between;
+	}
 }
 
 figure.media-content {
@@ -142,15 +146,29 @@ figure.media-content {
 
 footer {
 	@extend .dark;
-	padding: 5rem 0;
+	padding: 4rem 0 2rem;
 	
-	.container {
+	.container.site-credit {
 		display: flex;
 		flex-direction: column;
-
+		
 		@media (min-width: $md) {
+			align-items: flex-start;
 			flex-direction: row;
 			justify-content: space-between;
+			align-items: center;
+		}
+
+		font-size: 0.9rem;
+	}
+
+	.info {
+		.row {
+			justify-content: space-between;
+		}
+		.col {
+			margin-bottom: 2rem;
+			flex: initial;
 		}
 	}
 }
@@ -158,4 +176,13 @@ footer {
 input, button, textarea {
 	appearance: none;
 	border: 1px solid #ddd;
+}
+
+.text-sans {
+	font-family: $font-sans-serif;
+}
+
+.list-unstyled {
+	padding: 0;
+	list-style: none;
 }

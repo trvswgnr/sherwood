@@ -6,6 +6,7 @@
 			<nav :class="toggleClass">
 				<ul>
 					<li><a :href="theme.siteUrl + '/accommodations'">Accommodations</a></li>
+					<li><a :href="theme.siteUrl + '/weddings'">Weddings</a></li>
 					<li><a :href="theme.siteUrl + '/rates'">Rates</a></li>
 					<li><a :href="theme.siteUrl + '/contact'" class="btn btn-primary">Contact Us</a></li>
 				</ul>
