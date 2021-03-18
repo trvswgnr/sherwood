@@ -56,6 +56,10 @@ header {
 	}
 }
 
+.no-backdrop-filter header {
+	background-color: #fff;
+}
+
 .toggle {
 	display: block;
 	font-size: 1.7rem;
