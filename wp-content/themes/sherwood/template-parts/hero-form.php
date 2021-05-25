@@ -3,7 +3,8 @@
  * Template Part: Hero with Form
  */
 
-if (!isset($_GET['fbclid'])) {
+// only show when coming from facebook and a form is selected
+if (!isset($_GET['fbclid']) || !get_field('home_hero_form')) {
 	return;
 }
 ?>
@@ -15,11 +16,9 @@ if (!isset($_GET['fbclid'])) {
 				<p>Fill out the form to get more information and start booking your next big event!</p>
 			</div>
 			<div class="col">
-				<?php if (get_field('home_hero_form')) : ?>
 				<div class="form-wrapper">
 					<?php echo do_shortcode('[contact-form-7 id="' . get_field('home_hero_form') . '" title="Home Hero Form"]'); ?>
 				</div>
-				<?php endif; ?>
 			</div>
 		</div>
 	</div>
