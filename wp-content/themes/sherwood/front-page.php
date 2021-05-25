@@ -8,7 +8,7 @@
 get_header();
 ?>
 <article id="content" class="content content-home" role="content">
-	<?php get_template_part('template-parts/hero', 'form') ?>
+	<?php get_template_part('template-parts/hero', 'form'); ?>
 	<section class="hero section dark">
 		<background src="<?php echo get_cdn_url('behind-house.png'); ?>"></background>
 		<div class="container container-md">

@@ -8,7 +8,7 @@ if (!isset($_GET['fbclid']) || !get_field('home_hero_form')) {
 	return;
 }
 ?>
-<section class="hero section dark">
+<section class="hero hero--form section dark">
 	<div class="container">
 		<div class="row">
 			<div class="col">
